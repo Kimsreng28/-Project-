@@ -16,3 +16,17 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 ## Dependency Management
 
 The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+## How to run project
+
+- Compile all the .java files
+
+  `javac "path\to\src\UserClient.java" "path\to\src\UserServer.java" "path\to\src\UserServiceImpl.java" "path\to\src\UserService.java`
+
+- Run the Server
+
+  `java "path\to\src\UserServer.java"`
+
+- Run the Client
+
+  `java "path\to\src\UserClient.java"`
