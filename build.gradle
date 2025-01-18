@@ -32,12 +32,16 @@ dependencies {
     implementation 'io.grpc:grpc-stub:1.69.0'
     implementation 'javax.annotation:javax.annotation-api:1.3.2'
     implementation 'com.google.protobuf:protobuf-java:3.24.0'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation group: 'io.github.lognet', name: 'grpc-spring-boot-starter', version: '3.3.0'
 
+    
     // JUnit dependencies for testing
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
-mainClassName = 'main.java.com.example.rpc.server.RpcServerApplication' // Set the main class for the server
+mainClassName = 'com.example.rpc.server.RpcServerApplication' // Set the main class for the server
 protobuf {
     protoc {
         artifact = "com.google.protobuf:protoc:3.21.12"

@@ -1,4 +1,4 @@
-package main.java.com.example.rpc.client;
+package com.example.rpc.client;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -21,7 +21,7 @@ public class RpcClientApplication implements CommandLineRunner {
     public void run(String... args) {
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9090).usePlaintext().build();
         RpcServiceGrpc.RpcServiceBlockingStub stub = RpcServiceGrpc.newBlockingStub(channel);
-        Request request = Request.newBuilder().setMessage("Hello Server!").build();
+        Request request = Request.newBuilder().setMessage("Hello From Client!").build();
         Response response = stub.sendRequest(request);
         System.out.println("Response from server: " + response.getMessage());
         channel.shutdown();

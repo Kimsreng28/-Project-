@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  grpc-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - "9090:9090"
+    networks:
+      - grpc-network
+
+  grpc-client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    ports:
+      - "8081:8081" # Change from 8080 to 8081
+    depends_on:
+      - grpc-server
+    networks:
+      - grpc-network
+
+networks:
+  grpc-network:
+    driver: bridge
