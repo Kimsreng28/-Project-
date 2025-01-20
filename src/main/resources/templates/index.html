@@ -5,32 +5,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>gRPC Spring Boot Interface</title>
+    <title>RPC Spring Boot Interface</title>
   </head>
   <body class="bg-gray-100 flex items-center justify-center h-screen">
     <div
       class="p-6 bg-white rounded-lg shadow-md flex flex-col items-center justify-center"
     >
-      <h1 class="text-2xl font-bold mb-6 text-center">
-        Welcome to gRPC Client Interface
+      <h1
+        class="text-2xl font-bold mb-6 text-center font-mono hover:text-blue-500"
+      >
+        Welcome to RPC Client Interface
       </h1>
-      <form action="/send-request" method="post" class="space-y-4 w-80">
+      <form action="/sendRequest" method="post" class="space-y-4 w-80">
         <div>
-          <label for="message" class="block text-sm font-medium text-gray-700">
+          <label
+            for="message"
+            class="block text-xl font-medium text-gray-700 font-mono"
+          >
             Message:
           </label>
           <input
             type="text"
             id="message"
             name="message"
-            class="mt-1 w-full p-2 border rounded-lg text-sm text-gray-900 focus:ring-blue-500 focus:border-blue-500"
+            class="font-mono mt-1 w-full p-2 border rounded-lg text-sm text-gray-900 focus:ring-blue-500 focus:border-blue-500"
             placeholder="Enter your message"
             required
           />
         </div>
         <button
           type="submit"
-          class="w-full py-2 text-sm font-medium text-white bg-gray-800 rounded-lg hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
+          class="font-mono w-full py-2 text-sm font-medium text-white bg-gray-800 rounded-lg hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
         >
           Submit
         </button>

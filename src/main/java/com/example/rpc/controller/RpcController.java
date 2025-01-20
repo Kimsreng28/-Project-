@@ -21,9 +21,8 @@ public class RpcController {
         return "index";
     }
 
-    @PostMapping("/send-request")
+    @PostMapping("/sendRequest")
     public String sendRequest(@RequestParam String message, Model model) {
-        System.out.println("Received message: " + message);
 
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9090)
                 .usePlaintext()
@@ -37,5 +36,4 @@ public class RpcController {
 
         return "response";
     }
-
 }

@@ -15,3 +15,23 @@
    gradlew run  --args='client'
 
    ```
+
+3. **Run the Test**:
+
+   ```bash
+
+   gradlew build test
+
+   gradlew test
+
+   ```
+
+4. **Run Interface**:
+
+   ```bash
+
+   gradlew bootRun
+
+   http://localhost:8081/
+
+   ```
