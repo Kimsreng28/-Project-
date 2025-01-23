@@ -12,12 +12,11 @@ import io.grpc.stub.StreamObserver;
 public class RpcServiceImpl extends RpcServiceGrpc.RpcServiceImplBase {
     @Override
     public void sendRequest(Request request, StreamObserver<Response> responseObserver) {
-        String message = request.getMessage();
+        String clientMessage = request.getMessage();
+        String serverMessage = "Hello: " + clientMessage + "" + " from Server.";
 
-        Response response = Response.newBuilder()
-                .setMessage(message)
-                .build();
-
+        // Construct the response message
+        Response response = Response.newBuilder().setMessage(serverMessage).build();
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }

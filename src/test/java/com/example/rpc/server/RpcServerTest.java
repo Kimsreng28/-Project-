@@ -38,5 +38,12 @@ public class RpcServerTest {
         // Call the service implementation
         RpcServiceImpl service = new RpcServiceImpl();
         service.sendRequest(request, responseObserver);
+
+        // Add some waiting time to let the server process the request (if necessary)
+        try {
+            Thread.sleep(1000); // Give server time to respond
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     }
 }

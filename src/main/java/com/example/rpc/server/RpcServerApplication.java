@@ -24,6 +24,6 @@ public class RpcServerApplication {
         System.out.println("gRPC Server started on port 9090");
 
         grpcServer.start();
-        grpcServer.awaitTermination();
+        grpcServer.awaitTermination(); // Wait for the server to terminate
     }
 }
