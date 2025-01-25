@@ -13,7 +13,7 @@ public class RpcServiceImpl extends RpcServiceGrpc.RpcServiceImplBase {
     @Override
     public void sendRequest(Request request, StreamObserver<Response> responseObserver) {
         String clientMessage = request.getMessage();
-        String serverMessage = "Hello: " + clientMessage + "" + " from Server.";
+        String serverMessage = "Hello: " + clientMessage + "" + ".";
 
         // Construct the response message
         Response response = Response.newBuilder().setMessage(serverMessage).build();
